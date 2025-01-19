@@ -1,0 +1,109 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+
+    /* variables
+    how to write it
+    how to use it
+    why we use it
+    
+    
+    */
+}
+
+/* :root {
+    --ahmed: blue;
+    --mainPadding: 20px;
+
+} */
+
+/* div{
+    color: black;
+
+    background-color: var(--ahmed);
+    padding: var(--mainPadding);
+    border:2px solid black ;
+
+} */
+
+
+/* Global values 
+
+    inherit 
+    initial
+    unset
+    If inherit => inherit 
+    If Not => initial
+    revert
+    all
+
+*/
+
+
+
+section{
+    color: red;
+    font-size: 40px;
+    font-weight: bold;
+    background-color: #eee;
+    padding: 20px;
+    margin: 5px;
+    border: 2px solid black;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* grid system 
+
+\\parent
+\\child
+-- display : grid
+
+\\ grid-template-column => Number of columns In=>[px,%,auto,fr,repeat(),mix]
+
+\\grid-template-rows => Number of rows In => [px,%,auto,fr,repeat(),mix]
+
+\\column-gap
+
+\\row-gap
+
+short hand method {grid-gap : [Row Gap ] , [Column Gap]}
+
+
+
+*/
+.template {
+    margin: 20px auto;
+    width: 800px;
+    height: 500px;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    justify-content: space-between;
+    gap: 10px 10px;
+    background-color: aliceblue;
+    padding: 10px;
+}
+
+.template div {
+    background-color: rgb(64, 64, 202);
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    text-align: center;
+}
+.template :first-child{
+    grid-area: 2 / 4 / 4 / 2;
+} 
