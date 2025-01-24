@@ -1,29 +1,88 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GDG-Front-end-session3</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <!-- <section>
-        <p>this is paragraph</p>
-        <button>Button</button>
-      </section> -->
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <title>CSS-Session4</title>  
+    <style>  
+        /* CSS Variables: Think of these like nicknames for colors. */  
+        :root {  
+            --favorite-color: skyblue; /* A fun color we can use anywhere! */  
+        }    
   
-      <!-- grid template -->
+        .variable-box {  
+            background-color: var(--favorite-color); /* Using our favorite color! */  
+            padding: 10px;  
+            margin: 10px;  
+            border: 2px solid black;  
+        }  
   
-      <div class="template">
-        <div>1</div>
-        <div>2</div>
-        <div>3</div>
-        <div>4</div>
-        <div>5</div>
-        <div>6</div>
-        <div>7</div>
-        <div>8</div>
-        <div>9</div>
-      </div>
-</body>
-</html>
+        /* Global Values: These are magic words that change how things look. */  
+        .global-example {  
+            color: inherit; /* Copy the parent's color! */  
+            font-size: initial; /* Reset to the original size! */  
+        }  
+  
+        /* Grid System: A way to organize things in rows and columns. */  
+        .grid-container {  
+            display: grid;  
+            grid-template-columns: 100px 100px; /* Two columns, each 100px wide. */  
+            gap: 5px; /* Little spaces between the boxes. */  
+        }  
+  
+        /* Grid Child: Where each box goes. */  
+        .grid-item {  
+            grid-column: 1 / 3; /* Stretch across two columns. */  
+            grid-row: 1 / 2; /* Stay in the first row. */  
+        }  
+  
+        /* Transition: Make changes smooth and magical. */  
+        .transition-box {  
+            transition: background-color 0.5s ease; /* Change color smoothly in half a second. */  
+        }  
+  
+        .transition-box:hover {  
+            background-color: coral; /* Change color when you hover over it. */  
+        }  
+  
+        /* Transform: Fun ways to twist and turn things. */  
+        .transform-box {  
+            transform: rotate(10deg) scale(1.1); /* Tilt and make a little bigger. */  
+            transition: transform 0.5s;  
+        }  
+  
+        /* Media Queries: Make things change when the screen is small! */  
+        @media (max-width: 600px) {  
+            .media-box {  
+                font-size: 12px; /* Make text smaller on small screens. */  
+            }  
+        }  
+    </style>  
+</head>  
+<body>  
+    <div class="variable-box">  
+        CSS Variables are like nicknames for colors or sizes!  
+    </div>  
+  
+    <div class="global-example">  
+        Global values let us copy or reset styles easily!  
+    </div>  
+  
+    <div class="grid-container">  
+        <div class="grid-item">This box stretches across two columns!</div>  
+        <div class="grid-item">Grid Box 2</div>  
+    </div>  
+  
+    <div class="transition-box">  
+        Hover over me to see a smooth color change!  
+    </div>  
+  
+    <div class="transform-box">  
+        Watch me tilt and grow!  
+    </div>  
+  
+    <div class="media-box">  
+        Resize the screen to see this text change size!  
+    </div>  
+</body>  
+</html>  
